@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2021 m. Kov 07 d. 12:56
+-- Generation Time: 2021 m. Kov 14 d. 20:33
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.33
 
@@ -91,8 +91,9 @@ INSERT INTO `vartotojai` (`ID`, `name`, `lastname`, `password`) VALUES
 --
 
 CREATE TABLE `vertinimas` (
-  `user_ID` int(11) NOT NULL,
-  `vidurkis` int(11) NOT NULL
+  `ID` int(11) NOT NULL,
+  `vidurkis` int(5) NOT NULL,
+  `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -121,7 +122,7 @@ ALTER TABLE `vartotojai`
 -- Indexes for table `vertinimas`
 --
 ALTER TABLE `vertinimas`
-  ADD PRIMARY KEY (`vidurkis`);
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -149,7 +150,7 @@ ALTER TABLE `vartotojai`
 -- AUTO_INCREMENT for table `vertinimas`
 --
 ALTER TABLE `vertinimas`
-  MODIFY `vidurkis` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
