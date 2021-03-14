@@ -3,7 +3,6 @@ include('process.php');
  echo '<h3>Sveiki - ' . $_SESSION["username"] . '</h3>';
  
  
-echo $_SESSION['username'];
 ?>
 
 <html>
@@ -13,7 +12,7 @@ echo $_SESSION['username'];
     </head>
     <body>   
         
-        <button><a href="http://localhost/Parduotuve/1klausimas.php">Spresti testą</a></button><br>
+        <button><a href="http://localhost/Parduotuve/1question.php">Parduotuves Įvertinimas</a></button><br>
         <a href="logout.php">Logout</a>
     <table>
     <tr>

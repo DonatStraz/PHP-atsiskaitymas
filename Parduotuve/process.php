@@ -68,13 +68,24 @@ try {
 }
 
 setcookie("vartotojas", $_SESSION['username'], time()+60*60*4);
-setcookie("slaptazodis", $_SESSION['username'], time()+60*60*4);
+setcookie("slaptazodis", $_SESSION['password'], time()+60*60*4);
 
 
     $myConnect= mysqli_connect("$host","$username","$password", "$database") or die ("could not connect to mysql");
     $sql = "SELECT * FROM prekes";
     $result = mysqli_query($myConnect, $sql) or die("Bad Insert: $sql");
+    
+    //Ivertinimas 
+if (isset($_POST["submitt"])){
+    $sqlFour = "INSERT INTO vertinimas (vidurkis, name) VALUES ('" .  $_SESSION['average'] . "', '" . $_SESSION['username'] . "')";
+    $resultFour = mysqli_query($myConnect, $sqlFour) or die("Bad Insert: $sqlFour");
+    
+    
+};
 
+print_r($sqlFour);
+
+echo $_SESSION['average'];
 ?>  
 
 

@@ -52,9 +52,7 @@ include('process.php');
     $sqlThree = "TRUNCATE TABLE cart_userid";
     $resultThree = mysqli_query($myConnect, $sqlThree) or die("Bad Insert: $sqlThree");
     header('location: index.php');
-    } 
-                
-          
+    }      
         }
         
   
